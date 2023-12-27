@@ -1,5 +1,3 @@
-<!-- @format -->
-
 ### Trello Clone Project
 
 Hello this is my Trello Clone project I am doing
