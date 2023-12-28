@@ -31,12 +31,14 @@ export const Sidebar = ({
     isLoaded: isLoadedOrg,
   } = useOrganization();
 
-  const { userMemberships, isLoaded: isLoadedOrgList } =
-    useOrganizationList({
-      userMemberships: {
-        infinite: true,
-      },
-    });
+  const {
+    userMemberships,
+    isLoaded: isLoadedOrgList,
+  } = useOrganizationList({
+    userMemberships: {
+      infinite: true,
+    },
+  });
 
   const defaultAccordionValue: string[] = Object.keys(
     expanded
@@ -62,7 +64,15 @@ export const Sidebar = ({
   ) {
     return (
       <>
-        <Skeleton />
+        <div className="flex items-center justify-between mb-2">
+          <Skeleton className="h-10 w-[50%]" />
+          <Skeleton className="h-10 w-10" />
+        </div>
+        <div className="space-y-2">
+          <NavItem.Skeleton />
+          <NavItem.Skeleton />
+          <NavItem.Skeleton />
+        </div>
       </>
     );
   }
@@ -76,7 +86,8 @@ export const Sidebar = ({
           type="button"
           size="icon"
           variant="ghost"
-          className="ml-auto">
+          className="ml-auto"
+        >
           <Link href="/select-org">
             <Plus className="h-4 w-4" />
           </Link>
@@ -85,18 +96,24 @@ export const Sidebar = ({
       <Accordion
         type="multiple"
         defaultValue={defaultAccordionValue}
-        className="space-y-2">
-        {userMemberships.data.map(({ organization }) => (
-          <NavItem
-            key={organization.id}
-            isActive={
-              activeOrganization?.id === organization.id
-            }
-            isExpanded={expanded[organization.id]}
-            organization={organization as Organization}
-            onExpand={onExpand}
-          />
-        ))}
+        className="space-y-2"
+      >
+        {userMemberships.data.map(
+          ({ organization }) => (
+            <NavItem
+              key={organization.id}
+              isActive={
+                activeOrganization?.id ===
+                organization.id
+              }
+              isExpanded={expanded[organization.id]}
+              organization={
+                organization as Organization
+              }
+              onExpand={onExpand}
+            />
+          )
+        )}
       </Accordion>
     </>
   );
