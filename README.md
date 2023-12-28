@@ -13,3 +13,5 @@ THis project uses the following dependencies:
 - shadcn-ui
 - clerk
 - zustand
+- prisma
+- dockerized mysql
