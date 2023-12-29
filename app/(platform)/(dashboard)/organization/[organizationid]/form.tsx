@@ -26,8 +26,8 @@ export const Form = () => {
     <form action={onSubmit}>
       <div className="flex flex-col space-y-2">
         <FormInput errors={fieldErrors} />
+        <FormButton />
       </div>
-      <FormButton />
     </form>
   );
 };
