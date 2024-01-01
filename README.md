@@ -5,7 +5,7 @@ using React, NextJS, and TailwindCSS.
 
 ### Dependencies
 
-THis project uses the following dependencies:
+This project uses the following dependencies:
 
 - React
 - NextJS
