@@ -8,5 +8,12 @@ export const CreateBoard = z.object({
     })
     .min(3, {
       message: "Title is too short.",
+    })
+    .max(25, {
+      message: "Title is too long.",
     }),
+  image: z.string({
+    required_error: "Image is required",
+    invalid_type_error: "Image is required",
+  }),
 });
