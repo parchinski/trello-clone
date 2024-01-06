@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   icons: [
     {
-      url: "../public/logo.svg",
-      href: "../public/logo.svg",
+      url: "/logo.svg",
+      href: "/logo.svg",
     },
   ],
 };
