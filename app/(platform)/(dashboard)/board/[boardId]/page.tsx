@@ -1,5 +1,9 @@
 const BoardIdPage = () => {
-  return <div>BoardId Page!</div>;
+  return (
+    <div>
+      <h1>Board ID</h1>
+    </div>
+  );
 };
 
 export default BoardIdPage;
