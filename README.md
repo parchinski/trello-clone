@@ -1,4 +1,4 @@
-# Trello Clone
+# Trello Clone (Unfinished)
 
 Hello! This is my Trello Clone that I have developed
 using React, NextJS, and TailwindCSS.
